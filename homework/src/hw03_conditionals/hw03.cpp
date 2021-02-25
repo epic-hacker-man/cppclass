@@ -9,7 +9,16 @@
 //          100 -> 100
 double cppclass_abs(double in)
 {
-    return 0.0;
+    double product = 0;
+    if (in < 0)
+    {
+        product = in * -1;
+    }
+    else 
+    {
+        product = in;
+    }
+    return product;
 }
 
 // Pre-conditions: none
@@ -17,7 +26,15 @@ double cppclass_abs(double in)
 // Returns: returns whichever of the inputs is larger
 int max_of_two_items(int a, int b)
 {
-    return 0;
+
+    if ( a > b)
+    {
+        return a;
+    }
+    else 
+    {
+       return b;
+    } 
 }
 
 // Pre-conditions: none
@@ -25,7 +42,14 @@ int max_of_two_items(int a, int b)
 // Returns: returns whichever of the inputs is smaller
 int min_of_two_items(int a, int b)
 {
-    return 0;
+    if ( a < b)
+    {
+        return a;
+    }
+    else 
+    {
+       return b;
+    } 
 }
 
 // Pre-conditions: none
@@ -33,7 +57,23 @@ int min_of_two_items(int a, int b)
 // Returns: returns whichever of the inputs is largest
 int max_of_three_items(int a, int b, int c)
 {
-    return 0;
+    double comp = 0;
+    if ( a > b)
+    {
+       comp = a;
+    }
+    else 
+    {
+        comp = b;
+    }
+    if (comp > c)
+    {
+        return comp;
+    }
+    else
+    {
+       return c;
+    }
 }
 
 // Pre-conditions: none
@@ -45,7 +85,29 @@ int max_of_three_items(int a, int b, int c)
 //              c) unless it is divisible by 400
 bool is_leap_year(unsigned int year)
 {
-    return false;
+    if (0 == year % 4)
+    {
+        if (0 != year % 100)
+        {
+                return true;     
+        }
+        else
+        {
+         if (0 == year % 400)
+         {
+             return true;
+
+         }
+         else 
+         {
+             return false;
+         }
+        }
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // Pre-conditions: op is one of ['+', '-', '*', '/', '%']
@@ -54,5 +116,24 @@ bool is_leap_year(unsigned int year)
 // Returns: returns the value of: a op b
 int simple_calc(int a, int b, char op)
 {
-    return 0;
+    if (op == '+')
+    {
+        return a + b;
+    }
+    if (op == '-')
+    {
+        return a - b;
+    }
+    if (op == '*')
+    {
+        return a * b;
+    }
+    if (op == '/')
+    {
+        return a / b;
+    }
+    if (op == '%')
+    {
+        return a % b;
+    }
 }
